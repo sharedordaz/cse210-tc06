@@ -16,3 +16,4 @@ class Director:
         player1 = Player(player1_name)
         player2 = Player(player2_name)
         player3 = Player(player3_name)
+        
