@@ -3,7 +3,7 @@ class Board:
     """Save the numbers that are guessed"""
     def __init__(self):
         pass
-    def get_info(self, p_name, game_info, guessed_number="----"):
+    def get_info(self, p_name, guessed_number="----", game_info="****"):
         return (f"Player {p_name}: {guessed_number}, {game_info}")
 
     def get_number(self):
