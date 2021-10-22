@@ -28,14 +28,19 @@ class Director:
         self.player3.number = self.board.get_number()
 
 
-    def print_game(self):
+    def print_game(self, guess="----"):
 
-        info1 = self.board.get_info(self.player1.name, self.player1.number, self.player1.info)
-        info2 = self.board.get_info(self.player2.name, self.player2.number, self.player2.info)
-        info3 = self.board.get_info(self.player3.name, self.player3.number, self.player3.info)
+        info1 = self.board.get_info(self.player1.name, guess, self.player1.info)
+        info2 = self.board.get_info(self.player2.name, guess, self.player2.info)
+        info3 = self.board.get_info(self.player3.name, guess, self.player3.info)
         self.console.print_info(info1, info2, info3)
 
     def turns(self):
-        self.player1.ask_number(self.player1.name)
+        guess = self.player1.ask_number(self.player1.name)
+        
+        list_guess = self.player1.numToList(guess)
+
+        self.player1.guess = list_guess
+
         self.player1.info = self.calculator.game_info(self.player1.number, self.player1.guess)
-        self.print_game()
+        self.print_game(self)
