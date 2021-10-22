@@ -34,6 +34,7 @@ root                    (project root folder)
 
 ## Authors
 ---
+```
 * Edward Rivas, edwardriv45a3@gmail.com 
 * David Esguerra, davidjulian.es@gmail.com 
 * Elias Perez, elias.perez@alumnos.usm.CL 
