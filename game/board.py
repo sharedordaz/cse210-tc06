@@ -1,7 +1,24 @@
+import random
 class Board:
     """Save the numbers that are guessed"""
-    pass
     def __init__(self):
         pass
-    def get_info(self, p1_name, p2_name, p3_name):
-        return (f"--------------------\nPlayer {p1_name}: ----, ****\nPlayer {p2_name}: ----, ****\nPlayer {p3_name}: ----, ****\n--------------------\n")
+    def get_info(self, p_name, game_info, guessed_number="----"):
+        return (f"Player {p_name}: {guessed_number}, {game_info}")
+
+    def get_number(self):
+        num_list = []
+        number1 = random.randint(0, 9)
+        number2 = random.randint(0, 9)
+        number3 = random.randint(0, 9)
+        number4 = random.randint(0, 9)
+        num_list.append(number1)
+        num_list.append(number2)
+        num_list.append(number3)
+        num_list.append(number4)
+        return num_list
+
+
+"""
+x = Board()
+print(x.get_number())"""

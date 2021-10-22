@@ -9,9 +9,10 @@ class Player:
             print("Please write a number of only four digits\n")
             self.ask_number()    
         return guess
-        
+
     def numToList(self, guess):
         guess_list = []
         guess = str(guess)
         for x in guess:
             guess_list.append(x)
+        return guess_list
