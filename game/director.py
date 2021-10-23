@@ -44,11 +44,10 @@ class Director:
         self.player3.number = self.board.get_number()
 
 
-    def print_game(self, guess="----"):
-
-        info1 = self.board.get_info(self.player1.name, self.player1.guess, self.player1.info)
-        info2 = self.board.get_info(self.player2.name, self.player2.guess, self.player2.info)
-        info3 = self.board.get_info(self.player3.name, self.player3.guess, self.player3.info)
+    def print_game(self, guess=["-","-","-","-"]):
+        info1 = self.board.get_info(self.player1.name, " ".join(map(str, self.player1.guess)), " ".join(map(str, self.player1.info)))
+        info2 = self.board.get_info(self.player2.name, " ".join(map(str, self.player2.guess)), " ".join(map(str, self.player2.info)))
+        info3 = self.board.get_info(self.player3.name, " ".join(map(str, self.player3.guess)), " ".join(map(str, self.player3.info)))
         self.console.print_info(info1, info2, info3)
 
     def turns(self):
