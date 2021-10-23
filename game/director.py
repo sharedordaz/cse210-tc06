@@ -1,3 +1,4 @@
+from game import calculator
 from game.board import Board
 from game.player import Player
 from game.console import Console
@@ -30,9 +31,9 @@ class Director:
 
     def print_game(self, guess="----"):
 
-        info1 = self.board.get_info(self.player1.name, guess, self.player1.info)
-        info2 = self.board.get_info(self.player2.name, guess, self.player2.info)
-        info3 = self.board.get_info(self.player3.name, guess, self.player3.info)
+        info1 = self.board.get_info(self.player1.name, self.player1.guess, self.player1.info)
+        info2 = self.board.get_info(self.player2.name, self.player2.guess, self.player2.info)
+        info3 = self.board.get_info(self.player3.name, self.player3.guess, self.player3.info)
         self.console.print_info(info1, info2, info3)
 
     def turns(self):
@@ -43,4 +44,22 @@ class Director:
         self.player1.guess = list_guess
 
         self.player1.info = self.calculator.game_info(self.player1.number, self.player1.guess)
+        self.print_game(self)
+        #####
+        guess = self.player2.ask_number(self.player2.name)
+        
+        list_guess = self.player2.numToList(guess)
+
+        self.player2.guess = list_guess
+
+        self.player2.info = self.calculator.game_info(self.player2.number, self.player2.guess)
+        self.print_game(self)
+        #####
+        guess = self.player3.ask_number(self.player3.name)
+        
+        list_guess = self.player3.numToList(guess)
+
+        self.player3.guess = list_guess
+
+        self.player3.info = self.calculator.game_info( self.player3.number, self.player3.guess)
         self.print_game(self)

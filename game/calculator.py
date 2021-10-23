@@ -3,9 +3,7 @@ class Calculator:
     pass
     def __init__(self):
         pass
-    def gen_asterisk(self):
-        ast_list = ["*","*","*","*"]
-        return ast_list
+    
 
     def game_info(self, number, guessed_number):
         info = ["*","*","*","*"]
@@ -18,3 +16,7 @@ class Calculator:
                 info[x-1] = ("*")
 
         return info
+# x=Calculator
+# print(x.game_info(x, [4,4,4,4], [8,4,8,8]))
+
+
