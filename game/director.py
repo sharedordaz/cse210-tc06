@@ -20,13 +20,13 @@ class Director:
             win2 = self.calculator.check_if_win(self.player2.info)
             win3 = self.calculator.check_if_win(self.player3.info)
             if win1 != None: 
-                self.console.print_whatever(f"Player 1 won the game")
+                self.console.print_whatever(f"{self.player1.name} won the game")
                 break
             elif win2 != None:  
-                self.console.print_whatever(f"Player 2 won the game")
+                self.console.print_whatever(f"{self.player2.name} won the game")
                 break
             elif win3 != None:
-                self.console.print_whatever(f"Player 3 won the game")
+                self.console.print_whatever(f"{self.player3.name} won the game")
                 break
             
 
@@ -45,9 +45,9 @@ class Director:
 
 
     def print_game(self, guess=["-","-","-","-"]):
-        info1 = self.board.get_info(self.player1.name, " ".join(map(str, self.player1.guess)), " ".join(map(str, self.player1.info)))
-        info2 = self.board.get_info(self.player2.name, " ".join(map(str, self.player2.guess)), " ".join(map(str, self.player2.info)))
-        info3 = self.board.get_info(self.player3.name, " ".join(map(str, self.player3.guess)), " ".join(map(str, self.player3.info)))
+        info1 = self.board.get_info(self.player1.name, "".join(map(str, self.player1.guess)), "".join(map(str, self.player1.info)))
+        info2 = self.board.get_info(self.player2.name, "".join(map(str, self.player2.guess)), "".join(map(str, self.player2.info)))
+        info3 = self.board.get_info(self.player3.name, "".join(map(str, self.player3.guess)), "".join(map(str, self.player3.info)))
         self.console.print_info(info1, info2, info3)
 
     def turns(self):
