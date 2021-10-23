@@ -16,6 +16,10 @@ class Calculator:
                 info[x-1] = ("*")
 
         return info
+
+    def check_if_win(self,list):
+        if list == ["x","x","x","x"]:
+            return "won the game"
 # x=Calculator
 # print(x.game_info(x, [4,4,4,4], [8,4,8,8]))
 

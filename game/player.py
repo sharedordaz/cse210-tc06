@@ -5,6 +5,7 @@ class Player:
         self.number = number
         self.guess = guess
         self.info = info
+        self.win = False
 
     def ask_number(self, user):
         guess = int(input(f"{user}: What is your guess? "))
@@ -19,6 +20,7 @@ class Player:
         guess_list = []
 
         for x in guess:
-            guess_list.append(x)
+            int_x = int(x)
+            guess_list.append(int_x)
 
         return guess_list

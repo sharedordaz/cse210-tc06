@@ -13,7 +13,22 @@ class Director:
         self.create_players()
         self.print_game()
         self.assign_numbers()
-        self.turns()
+
+        while True:
+            self.turns()
+            win1 = self.calculator.check_if_win(self.player1.info)
+            win2 = self.calculator.check_if_win(self.player2.info)
+            win3 = self.calculator.check_if_win(self.player3.info)
+            if win1 != None: 
+                self.console.print_whatever(f"Player 1 won the game")
+                break
+            elif win2 != None:  
+                self.console.print_whatever(f"Player 2 won the game")
+                break
+            elif win3 != None:
+                self.console.print_whatever(f"Player 3 won the game")
+                break
+            
 
     def create_players(self):
         player1_name = input("Enter a name for player 1: ")
