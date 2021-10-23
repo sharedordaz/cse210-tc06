@@ -20,13 +20,13 @@ class Director:
             win2 = self.calculator.check_if_win(self.player2.info)
             win3 = self.calculator.check_if_win(self.player3.info)
             if win1 != None: 
-                self.console.print_whatever(f"{self.player1.name} won the game")
+                self.console.print_whatever(f"\n▄█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▄\n{self.player3.name} won the game\n▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▀")
                 break
-            elif win2 != None:  
-                self.console.print_whatever(f"{self.player2.name} won the game")
+            elif win2 != None:                
+                self.console.print_whatever(f"\n▄█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▄\n{self.player2.name} won the game\n▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▀")
                 break
             elif win3 != None:
-                self.console.print_whatever(f"{self.player3.name} won the game")
+                self.console.print_whatever(f"\n▄█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▄\n{self.player3.name} won the game\n▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▀")
                 break
             
 
